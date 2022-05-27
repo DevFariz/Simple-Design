@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500);
+/* 
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+ */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
