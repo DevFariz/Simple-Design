@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Desegn Home</title>
     <link rel="stylesheet" href="../styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../styles/general.css" />
     <link rel="stylesheet" href="../styles/home.css" />
   </head>
@@ -15,7 +19,8 @@
         <div class="header-container">
           <a href="/" class="logo__link">
             <p class="logo__text">
-              <span class="logo__text_black">Simple</span><span class="logo__text_orange">Design</span>
+              <span class="logo__text_black">Simple</span
+              ><span class="logo__text_orange">Design</span>
             </p>
             <p class="logo__desc">дизайн интерьера</p>
           </a>
@@ -39,18 +44,46 @@
             </ul>
           </nav>
           <div class="contacts">
-              <a class="contacts-container" href="tel:77005053000">
-                  <img src="../images/phone.svg" alt="phone" class="contacts__icon">
-                  <div class="contacts__content">
-                      <p class="contacts__phone">+7 700 505 3000</p>
-                      <p class="contacts__available">с 9:00 до 18:00</p>
-                  </div>
-              </a>
+            <a class="contacts-container" href="tel:77005053000">
+              <img
+                src="../images/phone.svg"
+                alt="phone"
+                class="contacts__icon"
+              />
+              <div class="contacts__content">
+                <p class="contacts__phone">+7 700 505 3000</p>
+                <p class="contacts__available">с 9:00 до 18:00</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev slider__btn-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/index.js"></script>
   </body>
 </html>

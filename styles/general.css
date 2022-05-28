@@ -93,11 +93,11 @@ body {
     display: flex;
 }
 
-.contacts__icon{
+.contacts__icon {
     transition: 0.25s;
 }
 
-.contacts-container:hover .contacts__icon{
+.contacts-container:hover .contacts__icon {
     transform: translateY(-10%);
 }
 
@@ -115,7 +115,7 @@ body {
     transition: 0.25s;
 }
 
-.contacts-container:hover .contacts__phone{
+.contacts-container:hover .contacts__phone {
     color: #BD7048;
 }
 
@@ -125,3 +125,17 @@ body {
 }
 
 /* header end */
+
+/* intro start */
+
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.slider__btn-prev{
+    width: 20px;
+    height: 5px;
+}
+
+/* intro end */
