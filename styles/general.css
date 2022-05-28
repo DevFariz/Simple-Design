@@ -13,4 +13,115 @@
 
 body {
     font-family: 'Montserrat Alternates', sans-serif;
+    color: #000000;
 }
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+/* header start */
+
+.header {
+    box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.05);
+    padding: 45px 0 32px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+}
+
+.logo__link {
+    color: inherit;
+}
+
+.logo__text {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.logo__text_black {
+    color: black;
+}
+
+.logo__text_orange {
+    color: #BD7048;
+    padding-left: 5px;
+}
+
+.logo__desc {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.menu__item {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 25px;
+}
+
+.menu__link {
+    color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.menu__link:hover {
+    color: #BD7048;
+    font-weight: 600;
+}
+
+.menu__link_active {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #BD7048;
+    text-underline-offset: 10px;
+    text-decoration: underline;
+}
+
+.contacts-container {
+    display: flex;
+}
+
+.contacts__icon{
+    transition: 0.25s;
+}
+
+.contacts-container:hover .contacts__icon{
+    transform: translateY(-10%);
+}
+
+.contacts__content {
+    margin-left: 15px;
+    text-align: right;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.contacts__phone {
+    font-weight: 600;
+    color: #3B3B3B;
+    margin-bottom: 3px;
+    transition: 0.25s;
+}
+
+.contacts-container:hover .contacts__phone{
+    color: #BD7048;
+}
+
+.contacts__available {
+    font-weight: 500;
+    color: rgba(59, 59, 59, 0.5);
+}
+
+/* header end */
