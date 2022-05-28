@@ -22,6 +22,27 @@ body {
     margin: 0 auto;
 }
 
+.container-bg{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 28px 50px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background: #BD7048;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #ac653f;
+}
+
 /* header start */
 
 .header {
@@ -126,16 +147,3 @@ body {
 
 /* header end */
 
-/* intro start */
-
-.swiper {
-    width: 100%;
-    height: 300px;
-}
-
-.slider__btn-prev{
-    width: 20px;
-    height: 5px;
-}
-
-/* intro end */
