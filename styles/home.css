@@ -322,3 +322,31 @@
 }
 
 /* design end */
+
+/* test start */
+
+.test {
+    background: url('../images/test.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 118px 0;
+    margin-bottom: 105px;
+}
+
+.test__title {
+    max-width: 475px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+.test__desc {
+    max-width: 475px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 35px;
+}
+
+/* test end */
