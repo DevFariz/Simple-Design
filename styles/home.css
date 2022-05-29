@@ -240,3 +240,85 @@
     margin-bottom: 40px;
 }
 /* plan end */
+
+/* design start */
+
+.design{
+    margin-bottom: 140px;
+}
+
+.design__title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.design__info {
+    max-width: 1004px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(38, 38, 38, 0.7);
+}
+
+.design-items__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #262626; 
+    margin-bottom: 42px;
+}
+ 
+.design-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+
+.design__img {
+    display: inline-block;
+    margin-bottom: 33px;
+}
+.design-item__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+}
+.design-item__name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #353535;
+}
+
+.btn__container{
+    text-align: center;
+}
+
+.card__btn{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #BD7048;
+    padding: 18px 34px 18px 68px;
+    border: none;
+    background: #FAFAFA;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.card__btn:hover{
+    background: #e4dede;
+}
+
+.card__img{
+    margin-right: 12px;
+}
+
+.design__more{
+    display: inline-block;
+}
+
+/* design end */
