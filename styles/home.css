@@ -350,3 +350,52 @@
 }
 
 /* test end */
+
+/* questions start */
+
+.questions {
+    margin-bottom: 74px;
+}
+
+.question-item{
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.questions__title {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.question__head {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #262626;
+    background: #FAFAFA;
+    border-radius: 100px;
+    padding: 10px;
+}
+.question__head span{
+    padding-left: 20px;
+}
+
+.question__body {
+    transition: 0.3s;
+    max-height: 0;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(38, 38, 38, 0.7);
+}
+
+.acc-close__btn{
+    transition: 0.3s;
+}
+
+/* questions end */
+
