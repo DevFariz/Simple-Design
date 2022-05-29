@@ -160,12 +160,12 @@
     margin-bottom: 80px;
 }
 
+
 .services-container {
     display: flex;
-    margin-left: 140px;
+    align-items: start;
+    margin: 0 0 80px 140px;
 }
-
-.services-content {}
 
 .services-content__title {
     font-weight: 600;
@@ -198,7 +198,11 @@
     margin-bottom: 80px;
 }
 
-.services__pic {
+.services-content_r{
+    margin-left: 140px;
+}
+
+.services__img_r{
     margin-top: -100px;
 }
 
