@@ -153,7 +153,9 @@
 
 /* services start */
 
-.services {}
+.services {
+    margin-bottom: 160px;
+}
 
 .services__title {
     text-align: center;
@@ -207,3 +209,34 @@
 }
 
 /* services end */
+
+/* plan start */
+
+.plan {
+    margin-bottom: 120px;
+}
+
+.plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan__content {
+    max-width: 560px;
+}
+.plan__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #262626;
+    margin-bottom: 32px;
+}
+.plan__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(38, 38, 38, 0.7);
+    margin-bottom: 40px;
+}
+/* plan end */
