@@ -45,6 +45,15 @@ const cardBtns = document.querySelectorAll('.card__btn');
 
 let roomDesigns = [];
 
+window.addEventListener("beforeunload", () => {
+  this.localStorage.removeItem("roomDesign");
+  this.localStorage.setItem("roomDesign", JSON.stringify(roomDesigns));
+});
+
+window.addEventListener('load', () => {
+  const elsFromLocalStorage = JSON.parse(localStorage.getItem("roomDesign"));
+  roomDesigns = [...elsFromLocalStorage];
+})
 
 cardBtns.forEach(btn => {
   btn.addEventListener('click', () => {
