@@ -39,47 +39,40 @@ accordionHeads.forEach((accordion) => {
 
 //************** accordion home page end ******************* */
 
-//************** open card start *****************/
+//************** open and close card start *****************/
 
 const body = document.querySelector('body');
 const openBtn = document.querySelector('.card-btn');
 const card = document.querySelector('.card');
+const closeBtn = document.querySelector('.close-card__btn');
+
+function isCardActive(card){
+  if(card.classList.contains('active')){
+    body.style.overflow = "hidden";
+  } else{
+    body.style.overflow = "auto";
+  }
+}
 
 openBtn.addEventListener('click', () => {
   card.style.transform = "translateY(0)";
   card.classList.add('active');
-
-  if(card.classList.contains('active')){
-    body.style.overflow = "hidden";
-  } else{
-    body.style.overflow = "auto";
-  }
+  isCardActive(card);
 });
-
-//************** open card end *****************/
-
-//************** close card end *****************/
-
-const closeBtn = document.querySelector('.close-card__btn');
 
 closeBtn.addEventListener('click', () => {
   card.style.transform = "translateY(-100%)";
   card.classList.remove('active');
-  
-  if(card.classList.contains('active')){
-    body.style.overflow = "hidden";
-  } else{
-    body.style.overflow = "auto";
-  }
+  isCardActive(card);
 });
 
-//************** close card end *****************/
-
+//************** open and close card end *****************/
 
 //************** card start *****************/
 
 const cardBtns = document.querySelectorAll('.card__btn');
 let roomDesigns = [];
+let cardList = document.querySelector('.card-list');
 
 window.addEventListener('load', () => {
   const elsFromLocalStorage = JSON.parse(localStorage.getItem("roomDesign"));
@@ -101,7 +94,6 @@ cardBtns.forEach(btn => {
   })
 });
 
-let cardList = document.querySelector('.card-list');
 
 function createCardItem() {
   const design = localStorage.getItem("roomDesign");

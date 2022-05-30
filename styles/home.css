@@ -492,7 +492,7 @@
     bottom: 0;
     z-index: 999;
     overflow-y: auto;
-    transition: 0.15s;
+    transition: 0.3s;
     padding-top: 100px;
     transform: translateY(-100%);
 }
