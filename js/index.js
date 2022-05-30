@@ -45,14 +45,17 @@ const cardBtns = document.querySelectorAll('.card__btn');
 
 let roomDesigns = [];
 
-window.addEventListener("beforeunload", () => {
-  this.localStorage.removeItem("roomDesign");
-  this.localStorage.setItem("roomDesign", JSON.stringify(roomDesigns));
-});
+// window.addEventListener("beforeunload", () => {
+//   localStorage.removeItem("roomDesign");
+//   localStorage.setItem("roomDesign", JSON.stringify(roomDesigns));
+// });
 
 window.addEventListener('load', () => {
   const elsFromLocalStorage = JSON.parse(localStorage.getItem("roomDesign"));
-  roomDesigns = [...elsFromLocalStorage];
+  if(elsFromLocalStorage !== null){
+    roomDesigns = [...elsFromLocalStorage];
+  }
+  console.log(elsFromLocalStorage)
 })
 
 cardBtns.forEach(btn => {
