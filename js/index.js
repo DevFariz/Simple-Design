@@ -42,22 +42,38 @@ accordionHeads.forEach((accordion) => {
 //************** open card start *****************/
 
 const body = document.querySelector('body');
-const cardBtn = document.querySelector('.card-btn');
+const openBtn = document.querySelector('.card-btn');
 const card = document.querySelector('.card');
 
-cardBtn.addEventListener('click', () => {
-
+openBtn.addEventListener('click', () => {
   card.style.transform = "translateY(0)";
-  card.classList.toggle('active');
+  card.classList.add('active');
 
   if(card.classList.contains('active')){
     body.style.overflow = "hidden";
   } else{
     body.style.overflow = "auto";
   }
-})
+});
 
 //************** open card end *****************/
+
+//************** close card end *****************/
+
+const closeBtn = document.querySelector('.close-card__btn');
+
+closeBtn.addEventListener('click', () => {
+  card.style.transform = "translateY(-100%)";
+  card.classList.remove('active');
+  
+  if(card.classList.contains('active')){
+    body.style.overflow = "hidden";
+  } else{
+    body.style.overflow = "auto";
+  }
+});
+
+//************** close card end *****************/
 
 
 //************** card start *****************/
@@ -102,7 +118,6 @@ function getDesignsFromLocalStorage() {
   const parsedObj = JSON.parse(design);
   return parsedObj;
 }
-
 
 //************** card end *****************/
 

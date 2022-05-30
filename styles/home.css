@@ -492,14 +492,34 @@
     bottom: 0;
     z-index: 999;
     overflow-y: auto;
+    transition: 0.15s;
+    padding-top: 100px;
+    transform: translateY(-100%);
+}
+
+
+.close-card__btn{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #fff;
+}
+
+.close-card__btn:hover .close-card__btn-text{
+    color: rgb(184, 121, 5);
+}
+
+.close-card__btn-text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(40, 40, 40, 0.7);
+    margin-right: 8px;
     transition: 0.3s;
 }
- 
-
- .card{
-     padding-top: 100px;
-     transform: translateY(-100%);
- }
 
 .card-container{
     max-width: 1100px;
