@@ -33,7 +33,6 @@ accordionHeads.forEach((accordion) => {
       accBody.style.maxHeight = accBody.scrollHeight + "px";
       toggleBtn.style.transform = "rotate(45deg)";
     }
-
   });
 });
 
@@ -41,50 +40,46 @@ accordionHeads.forEach((accordion) => {
 
 //************** card start *****************/
 
-const cardBtns = document.querySelectorAll('.card__btn');
+const cardBtns = document.querySelectorAll(".card__btn");
 
 let roomDesigns = [];
 
-// window.addEventListener("beforeunload", () => {
-//   localStorage.removeItem("roomDesign");
-//   localStorage.setItem("roomDesign", JSON.stringify(roomDesigns));
-// });
-
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   const elsFromLocalStorage = JSON.parse(localStorage.getItem("roomDesign"));
-  if(elsFromLocalStorage !== null){
+  if (elsFromLocalStorage !== null) {
     roomDesigns = [...elsFromLocalStorage];
   }
-  console.log(elsFromLocalStorage)
-})
+  console.log(elsFromLocalStorage);
+});
 
-cardBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    
+cardBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
     const roomDesignsItem = {};
-    roomDesignsItem.price = btn.previousElementSibling.getAttribute('data-price');
+    roomDesignsItem.price =
+      btn.previousElementSibling.getAttribute("data-price");
     roomDesignsItem.name = btn.previousElementSibling.innerText;
-    roomDesignsItem.category = btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
+    roomDesignsItem.category =
+      btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
     roomDesigns.push(roomDesignsItem);
     const roomDesignsObj = JSON.stringify(roomDesigns);
     localStorage.setItem("roomDesign", roomDesignsObj);
     showCardItem();
-    window.addEventListener('load', () => {
-      roomDesigns = getDesignsFromLocalStorage()
-    })
-  })
+    window.addEventListener("load", () => {
+      roomDesigns = getDesignsFromLocalStorage();
+    });
+  });
 });
 
-let cardList = document.querySelector('.card-list');
+let cardList = document.querySelector(".card-list");
 
 function showCardItem() {
   const design = localStorage.getItem("roomDesign");
   const parsedObj = JSON.parse(design);
-  let li = document.createElement('li');
+  let li = document.createElement("li");
 
   for (let index = 0; index < parsedObj.length; index++) {
-    li.innerText = parsedObj[index].category + ' ' + parsedObj[index].price;
-    cardList.append(li)
+    li.innerText = parsedObj[index].category + " " + parsedObj[index].price;
+    cardList.append(li);
   }
 }
 
