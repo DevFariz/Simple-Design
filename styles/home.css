@@ -509,9 +509,8 @@
 .card-container__form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 80px    ;
+    column-gap: 80px;
 }
-
 
 .card__title{
     font-weight: 600;

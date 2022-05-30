@@ -61,7 +61,6 @@ window.addEventListener('load', () => {
   if(elsFromLocalStorage !== null){
     roomDesigns = [...elsFromLocalStorage];
   }
-  console.log(elsFromLocalStorage)
 })
 
 cardBtns.forEach(btn => {
@@ -73,20 +72,16 @@ cardBtns.forEach(btn => {
     roomDesigns.push(roomDesignsItem);
     const roomDesignsObj = JSON.stringify(roomDesigns);
     localStorage.setItem("roomDesign", roomDesignsObj);
-    showCardItem();
-    window.addEventListener('load', () => {
-      roomDesigns = getDesignsFromLocalStorage()
-    })
+    createCardItem();
   })
 });
 
 let cardList = document.querySelector('.card-list');
 
-function showCardItem() {
+function createCardItem() {
   const design = localStorage.getItem("roomDesign");
   const parsedObj = JSON.parse(design);
   let li = document.createElement('li');
-
   for (let index = 0; index < parsedObj.length; index++) {
     li.innerText = parsedObj[index].category + ' ' + parsedObj[index].price;
     cardList.append(li)
