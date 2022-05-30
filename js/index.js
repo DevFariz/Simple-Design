@@ -41,11 +41,20 @@ accordionHeads.forEach((accordion) => {
 
 //************** open card start *****************/
 
+const body = document.querySelector('body');
 const cardBtn = document.querySelector('.card-btn');
 const card = document.querySelector('.card');
 
 cardBtn.addEventListener('click', () => {
+
   card.style.transform = "translateY(0)";
+  card.classList.toggle('active');
+
+  if(card.classList.contains('active')){
+    body.style.overflow = "hidden";
+  } else{
+    body.style.overflow = "auto";
+  }
 })
 
 //************** open card end *****************/
