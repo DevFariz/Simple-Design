@@ -105,8 +105,8 @@ function getItemsFromLocalStorageAfterLoad(){
 
 
     designsAmount += savedDesignsAmount
-    addedDesignsAmount.innerText =  designsAmount;
-    totalAmount.innerText = designsAmount;
+    addedDesignsAmount.innerText =  designsAmount + ' тг';
+    totalAmount.innerText = designsAmount + ' тг';
 }
 
 function getItemsFromLocalStorage() {
@@ -126,8 +126,8 @@ function createCardItem(btn) {
   cardList.append(li)
 
   designsAmount += parseInt(roomDesignsItem.price);
-  addedDesignsAmount.innerText = designsAmount;
-  totalAmount.innerText =  designsAmount + servicesAmount
+  addedDesignsAmount.innerText = designsAmount + ' тг';
+  totalAmount.innerText =  designsAmount + servicesAmount + ' тг';
 }
 
 cardBtns.forEach(btn => {
@@ -161,7 +161,7 @@ cardInps.forEach(cardInp => {
       servicesAmount -= parseInt(cardInp.value);
     }
 
-    totalAmount.innerText = designsAmount + servicesAmount;
+    totalAmount.innerText = designsAmount + servicesAmount + ' тг';
   })
 })
 
@@ -173,7 +173,7 @@ function createServicesItem(name, price) {
   const pPrice = document.createElement('p');
   pPrice.classList.add('added-item__price');
   pName.textContent = name;
-  pPrice.textContent = price;
+  pPrice.textContent = price + ' тг';
   div.append(pName);
   div.append(pPrice);
   cardContent.append(div);
