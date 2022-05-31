@@ -576,7 +576,7 @@
     color: #000000;
 }
 
-.card-list{
+.card-lists{
     max-width: 330px;
     margin: 0 auto;
     list-style: disc;
@@ -640,6 +640,14 @@
     font-size: 20px;
     line-height: 24px;
     color: #000000;
+}
+
+.added-to-card{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(55, 55, 55, 0.5);
+    margin-bottom: 15px;
 }
 
 .added-card__btn{

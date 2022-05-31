@@ -74,42 +74,56 @@ const cardBtns = document.querySelectorAll('.card__btn');
 let roomDesigns = [];
 let cardList = document.querySelector('.card-list');
 
-window.addEventListener('load', () => {
+
+function addItemToLocalStorage(btn) {
+  const roomDesignsItem = {};
+  roomDesignsItem.price = btn.previousElementSibling.getAttribute('data-price');
+  roomDesignsItem.name = btn.previousElementSibling.innerText;
+  roomDesignsItem.category = btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
+  roomDesigns.push(roomDesignsItem);
+  const roomDesignsObj = JSON.stringify(roomDesigns);
+  localStorage.setItem("roomDesign", roomDesignsObj);
+}
+
+function getItemsFromLocalStorageAfterLoad(){
   const elsFromLocalStorage = JSON.parse(localStorage.getItem("roomDesign"));
   if(elsFromLocalStorage !== null){
     roomDesigns = [...elsFromLocalStorage];
   }
-})
-
-cardBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const roomDesignsItem = {};
-    roomDesignsItem.price = btn.previousElementSibling.getAttribute('data-price');
-    roomDesignsItem.name = btn.previousElementSibling.innerText;
-    roomDesignsItem.category = btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
-    roomDesigns.push(roomDesignsItem);
-    const roomDesignsObj = JSON.stringify(roomDesigns);
-    localStorage.setItem("roomDesign", roomDesignsObj);
-    createCardItem();
-  })
-});
-
-
-function createCardItem() {
-  const design = localStorage.getItem("roomDesign");
-  const parsedObj = JSON.parse(design);
-  let li = document.createElement('li');
-  for (let index = 0; index < parsedObj.length; index++) {
-    li.innerText = parsedObj[index].category + ' ' + parsedObj[index].price;
+  roomDesigns.forEach(roomDesign => {
+    let li = document.createElement('li');
+    li.innerText = `${roomDesign.category} [${roomDesign.price}]: ${roomDesign.name}`;
+    li.classList.add('added-to-card')
     cardList.append(li)
-  }
+  })
+
 }
 
-function getDesignsFromLocalStorage() {
+function getItemsFromLocalStorage() {
   const design = localStorage.getItem("roomDesign");
   const parsedObj = JSON.parse(design);
   return parsedObj;
 }
+
+function createCardItem(btn) {
+  let li = document.createElement('li');
+  const roomDesignsItem = {};
+  roomDesignsItem.price = btn.previousElementSibling.getAttribute('data-price');
+  roomDesignsItem.name = btn.previousElementSibling.innerText;
+  roomDesignsItem.category = btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
+  li.innerText = `${roomDesignsItem.category} [${roomDesignsItem.price}]: ${roomDesignsItem.name}`;
+  li.classList.add('added-to-card')
+  cardList.append(li)
+}
+
+cardBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    addItemToLocalStorage(btn);
+    createCardItem(btn);
+  })
+});
+
+window.addEventListener('load', getItemsFromLocalStorageAfterLoad());
 
 //************** card end *****************/
 
