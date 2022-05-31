@@ -70,6 +70,12 @@ closeBtn.addEventListener('click', () => {
 
 //************** card start *****************/
 
+const totalAmount = document.querySelector('.added-total__price');
+const addedDesignsAmount = document.querySelector('.added__designs');
+let designsAmount = 0;
+let servicesAmount = 0;
+let savedDesignsAmount = 0;
+
 const cardBtns = document.querySelectorAll('.card__btn');
 let roomDesigns = [];
 const cardList = document.querySelector('.card-list');
@@ -93,8 +99,14 @@ function getItemsFromLocalStorageAfterLoad(){
     let li = document.createElement('li');
     li.innerText = `${roomDesign.category} [${roomDesign.price}]: ${roomDesign.name}`;
     li.classList.add('added-to-card')
-    cardList.append(li)
-  })
+    cardList.append(li);
+    savedDesignsAmount += parseInt(roomDesign.price)
+  });
+
+
+    designsAmount += savedDesignsAmount
+    addedDesignsAmount.innerText =  designsAmount;
+    totalAmount.innerText = designsAmount;
 }
 
 function getItemsFromLocalStorage() {
@@ -110,8 +122,12 @@ function createCardItem(btn) {
   roomDesignsItem.name = btn.previousElementSibling.innerText;
   roomDesignsItem.category = btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
   li.innerText = `${roomDesignsItem.category} [${roomDesignsItem.price}]: ${roomDesignsItem.name}`;
-  li.classList.add('added-to-card')
+  li.classList.add('added-to-card');
   cardList.append(li)
+
+  designsAmount += parseInt(roomDesignsItem.price);
+  addedDesignsAmount.innerText = designsAmount;
+  totalAmount.innerText =  designsAmount + servicesAmount
 }
 
 cardBtns.forEach(btn => {
@@ -129,7 +145,6 @@ window.addEventListener('load', getItemsFromLocalStorageAfterLoad());
 //************** card calculator start *****************/
 
 const cardInps = document.getElementsByName('card-inp');
-let servicesTotal = 0;
 const cardContent = document.querySelector('.card-container__content-items');
 
 cardInps.forEach(cardInp => {
@@ -140,11 +155,13 @@ cardInps.forEach(cardInp => {
 
     if(cardInp.checked){
       createServicesItem(servicesItem.name, servicesItem.price);
-      servicesTotal += parseInt(cardInp.value);
+      servicesAmount += parseInt(cardInp.value);
     } else{
       removeServicesItem(servicesItem.name)
-      servicesTotal -= parseInt(cardInp.value);
+      servicesAmount -= parseInt(cardInp.value);
     }
+
+    totalAmount.innerText = designsAmount + servicesAmount;
   })
 })
 
