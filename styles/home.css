@@ -494,7 +494,7 @@
     overflow-y: auto;
     transition: 0.3s;
     padding-top: 100px;
-    transform: translateY(-100%);
+    transform: translateX(100%);
 }
 
 

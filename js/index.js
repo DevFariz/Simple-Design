@@ -55,13 +55,13 @@ function isCardActive(card){
 }
 
 openBtn.addEventListener('click', () => {
-  card.style.transform = "translateY(0)";
+  card.style.transform = "translateX(0)";
   card.classList.add('active');
   isCardActive(card);
 });
 
 closeBtn.addEventListener('click', () => {
-  card.style.transform = "translateY(-100%)";
+  card.style.transform = "translateX(100%)";
   card.classList.remove('active');
   isCardActive(card);
 });
@@ -72,8 +72,7 @@ closeBtn.addEventListener('click', () => {
 
 const cardBtns = document.querySelectorAll('.card__btn');
 let roomDesigns = [];
-let cardList = document.querySelector('.card-list');
-
+const cardList = document.querySelector('.card-list');
 
 function addItemToLocalStorage(btn) {
   const roomDesignsItem = {};
@@ -96,7 +95,6 @@ function getItemsFromLocalStorageAfterLoad(){
     li.classList.add('added-to-card')
     cardList.append(li)
   })
-
 }
 
 function getItemsFromLocalStorage() {
@@ -128,3 +126,49 @@ window.addEventListener('load', getItemsFromLocalStorageAfterLoad());
 //************** card end *****************/
 
 
+//************** card calculator start *****************/
+
+const cardInps = document.getElementsByName('card-inp');
+let servicesTotal = 0;
+const cardContent = document.querySelector('.card-container__content-items');
+
+cardInps.forEach(cardInp => {
+  cardInp.addEventListener('change', () => {
+    const servicesItem = {};
+    servicesItem.name = cardInp.nextElementSibling.textContent;
+    servicesItem.price = cardInp.value;
+
+    if(cardInp.checked){
+      createServicesItem(servicesItem.name, servicesItem.price);
+      servicesTotal += parseInt(cardInp.value);
+    } else{
+      removeServicesItem(servicesItem.name)
+      servicesTotal -= parseInt(cardInp.value);
+    }
+  })
+})
+
+function createServicesItem(name, price) {
+  const div = document.createElement('div');
+  div.classList.add('added-item');
+  const pName = document.createElement('p');
+  pName.classList.add('added-item__name');
+  const pPrice = document.createElement('p');
+  pPrice.classList.add('added-item__price');
+  pName.textContent = name;
+  pPrice.textContent = price;
+  div.append(pName);
+  div.append(pPrice);
+  cardContent.append(div);
+}
+
+function removeServicesItem(name){
+  const names = document.querySelectorAll('.added-item__name');
+  names.forEach(n => {
+    if(n.textContent === name){
+      n.parentElement.remove()
+    }
+  })
+}
+
+//************** card calculator end *****************/
