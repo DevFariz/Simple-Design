@@ -97,12 +97,18 @@ function getItemsFromLocalStorageAfterLoad(){
   }
   roomDesigns.forEach(roomDesign => {
     let li = document.createElement('li');
+    let deleteBtn = document.createElement('button');
+
     li.innerText = `${roomDesign.category} [${roomDesign.price}]: ${roomDesign.name}`;
-    li.classList.add('added-to-card')
+    li.classList.add('added-to-card');
+    deleteBtn.classList.add('card__delete-btn')
+    deleteBtn.textContent = '(удалить)';
+
+    li.append(deleteBtn);
     cardList.append(li);
+
     savedDesignsAmount += parseInt(roomDesign.price)
   });
-
 
     designsAmount += savedDesignsAmount
     addedDesignsAmount.innerText =  designsAmount + ' тг';
@@ -117,13 +123,20 @@ function getItemsFromLocalStorage() {
 
 function createCardItem(btn) {
   let li = document.createElement('li');
+  let deleteBtn = document.createElement('button');
+  
   const roomDesignsItem = {};
   roomDesignsItem.price = btn.previousElementSibling.getAttribute('data-price');
   roomDesignsItem.name = btn.previousElementSibling.innerText;
   roomDesignsItem.category = btn.parentElement.parentElement.parentElement.previousElementSibling.innerText;
   li.innerText = `${roomDesignsItem.category} [${roomDesignsItem.price}]: ${roomDesignsItem.name}`;
   li.classList.add('added-to-card');
-  cardList.append(li)
+
+  deleteBtn.classList.add('card__delete-btn')
+  deleteBtn.textContent = '(удалить)';
+  li.append(deleteBtn);
+
+  cardList.append(li);
 
   designsAmount += parseInt(roomDesignsItem.price);
   addedDesignsAmount.innerText = designsAmount + ' тг';
@@ -140,7 +153,6 @@ cardBtns.forEach(btn => {
 window.addEventListener('load', getItemsFromLocalStorageAfterLoad());
 
 //************** card end *****************/
-
 
 //************** card calculator start *****************/
 
@@ -187,5 +199,26 @@ function removeServicesItem(name){
     }
   })
 }
+
+
+let deleteBtns = document.querySelectorAll('.card__delete-btn');
+
+deleteBtns.forEach(deleteBtn => {
+  deleteBtn.addEventListener('click', () => {
+    let roomDesigns = localStorage.getItem("roomDesign");
+    const parsedObj = JSON.parse(roomDesigns);
+
+    for(let i = 0; i < parsedObj.length; i++){
+      if(parsedObj[i].name){
+        console.log(parsedObj[i].name)
+      }
+    }
+
+     localStorage.setItem('roomDesign',JSON.stringify(roomDesigns));
+     deleteBtn.parentElement.remove();
+  })
+})
+
+
 
 //************** card calculator end *****************/

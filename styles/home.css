@@ -709,4 +709,18 @@
     margin-bottom: 10px;
 }
 
+.card__delete-btn{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #BD7048;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.card__delete-btn:hover{
+    color: red;
+}
+
 /* card end */
