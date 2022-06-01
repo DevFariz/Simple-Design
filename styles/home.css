@@ -33,6 +33,10 @@
     margin: 0 auto 42px;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets {
+    bottom: 150px;
+}
+
 .swiper-pagination-bullet {
     background-color: #fff;
 }
