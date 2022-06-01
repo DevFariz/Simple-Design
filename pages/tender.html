@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Design tender</title>
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../styles/tender.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/tender.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-          <div class="header-container">
-            <a href="./index.html" class="logo__link">
-              <h1 class="logo__text">
-                <span class="logo__text_black">Simple</span
-                ><span class="logo__text_orange">Design</span>
-              </h1>
-              <p class="logo__desc">дизайн интерьера</p>
+      <div class="container">
+        <div class="header-container">
+          <a href="./index.html" class="logo__link">
+            <h1 class="logo__text">
+              <span class="logo__text_black">Simple</span
+              ><span class="logo__text_orange">Design</span>
+            </h1>
+            <p class="logo__desc">дизайн интерьера</p>
+          </a>
+          <nav class="nav">
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="./index.html" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="./catalog.html" class="menu__link">Каталог</a>
+              </li>
+              <li class="menu__item">
+                <a href="./about.html" class="menu__link">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link_active">Цены</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <a class="contacts-container" href="tel:77005053000">
+              <img
+                src="../images/phone.svg"
+                alt="phone"
+                class="contacts__icon"
+              />
+              <div class="contacts__content">
+                <p class="contacts__phone">+7 700 505 3000</p>
+                <p class="contacts__available">с 9:00 до 18:00</p>
+              </div>
             </a>
-            <nav class="nav">
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="./index.html" class="menu__link">Главная</a>
-                </li>
-                <li class="menu__item">
-                  <a href="./catalog.html" class="menu__link">Каталог</a>
-                </li>
-                <li class="menu__item">
-                  <a href="./about.html" class="menu__link">О нас</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link menu__link_active">Цены</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="contacts">
-              <a class="contacts-container" href="tel:77005053000">
-                <img
-                  src="../images/phone.svg"
-                  alt="phone"
-                  class="contacts__icon"
-                />
-                <div class="contacts__content">
-                  <p class="contacts__phone">+7 700 505 3000</p>
-                  <p class="contacts__available">с 9:00 до 18:00</p>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
-      </header>
-      <main class="main">
-          <section class="intro">
-              <div class="container-bg">
-                  <div class="intro-container">
-                        <h2 class="intro__title">Тендер строительных бригад</h2>
-                  </div>
-              </div>
-          </section>
-      </main>
-</body>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro">
+        <div class="container-bg">
+          <div class="intro-container">
+            <h2 class="intro__title">Тендер строительных бригад</h2>
+          </div>
+        </div>
+        <div class="container">
+          <p class="intro__info">
+            Мы отправим ваш проект проверенным строительным бригадам, которые
+            сделают расчёт. Если у вас на примете есть строители, наш специалист
+            по техническому надзору проедет на их стройки и проверит качество
+            работы, а после даст вам своё заключение.
+          </p>
+          <div class="intro-price__info">
+              <div class="intro-price__text">Стоимость услуги:</div>
+              <div class="intro__price">49 000 тг</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
