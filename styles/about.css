@@ -138,3 +138,47 @@
 }
 
 /* team end */
+
+/* team lead start */
+
+.team-lead{
+    margin-bottom: 65px;
+}
+
+.team-lead-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-lead__info {
+    max-width: 662px;
+}
+.team-lead__name {
+    font-size: 43px;
+    line-height: 52px;
+    color: #1B1B1B;
+    margin-bottom: 20px;
+}
+
+.team-lead__desc-container{
+    margin-bottom: 35px;
+}
+
+.team-lead__desc {
+    font-size: 20px;
+    line-height: 24px;
+    color: #7E7E7E;
+}
+
+.team-lead__texts{
+    padding-left: 30px;
+    list-style: disc;
+}
+
+.team-lead__text {
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+/* team lead end */
