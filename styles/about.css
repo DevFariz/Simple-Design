@@ -182,3 +182,62 @@
 }
 
 /* team lead end */
+
+/* projects info start */
+
+.projects-info {
+    margin-bottom: 50px;
+}
+
+.projects-info__title-container {
+    position: relative;
+    margin-bottom: 45px;
+}
+.projects-info__title {
+    display: inline-block;
+    position: relative;
+    max-width: 600px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #363636;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.projects-info__title-container::after{
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    z-index: 1;
+}
+
+.projects-info__title span{
+    color: #BD7048;
+}
+
+.projects-info-container{
+    height: 66vh;
+    background: url('../images/video.jpg');
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play__video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(50% 50% at 50% 50%, #BD7048 0%, rgba(189, 112, 72, 0) 0.01%, #BD7048 100%);
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+}
+
+/* projects info end */
