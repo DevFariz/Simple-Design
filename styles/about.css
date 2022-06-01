@@ -1,3 +1,5 @@
+/* intro start */
+
 .intro {
     padding: 40px 0 30px;
     text-align: center;
@@ -28,3 +30,38 @@
 .intro__img {
     width: 100%;
 }
+
+/* intro end */
+
+/* concepts start */
+
+.concepts {
+    margin-bottom: 80px;
+}
+
+.concepts-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.concepts__title {
+    max-width: 580px;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 45px;
+}
+.concepts__title span{
+    color: #BD7048;
+}
+.concepts__text {
+    max-width: 580px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+
+/* concepts end */
