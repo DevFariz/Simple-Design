@@ -1,0 +1,23 @@
+/* intro start */
+.intro{
+    margin-bottom: 65px;
+}
+
+.intro-container{
+    background: url('../images/tender.jpg');
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.intro__title{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+    padding: 0 0 65px 134px;
+}
+
+/* intro end */
