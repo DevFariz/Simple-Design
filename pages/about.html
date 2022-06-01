@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/general.css" />
     <link rel="stylesheet" href="../styles/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -95,6 +99,52 @@
           </div>
         </div>
       </section>
+      <section class="team">
+        <div class="container">
+          <div class="team__title-container">
+            <h2 class="team__title">
+              В команде Simple design <span>21 человек</span>
+            </h2>
+          </div>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  src="../images/about-slider-01.jpg"
+                  alt="team"
+                  class="swiper-slide__img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../images/about-slider-01.jpg"
+                  alt="team"
+                  class="swiper-slide__img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../images/about-slider-01.jpg"
+                  alt="team"
+                  class="swiper-slide__img"
+                />
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <img src="../images/team-slider-arrow.svg" alt="arrow">
+            </div>
+            <div class="swiper-button-next">
+                <img src="../images/team-slider-arrow.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/about.js"></script>
   </body>
 </html>
