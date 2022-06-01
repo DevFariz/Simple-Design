@@ -201,23 +201,23 @@ function removeServicesItem(name){
 }
 
 
-let deleteBtns = document.querySelectorAll('.card__delete-btn');
+// let deleteBtns = document.querySelectorAll('.card__delete-btn');
 
-deleteBtns.forEach(deleteBtn => {
-  deleteBtn.addEventListener('click', () => {
-    let roomDesigns = localStorage.getItem("roomDesign");
-    const parsedObj = JSON.parse(roomDesigns);
+// deleteBtns.forEach(deleteBtn => {
+//   deleteBtn.addEventListener('click', () => {
+//     let roomDesigns = localStorage.getItem("roomDesign");
+//     const parsedObj = JSON.parse(roomDesigns);
 
-    for(let i = 0; i < parsedObj.length; i++){
-      if(parsedObj[i].name){
-        console.log(parsedObj[i].name)
-      }
-    }
+//     for(let i = 0; i < parsedObj.length; i++){
+//       if(parsedObj[i].name){
+//         console.log(parsedObj[i].name)
+//       }
+//     }
 
-     localStorage.setItem('roomDesign',JSON.stringify(roomDesigns));
-     deleteBtn.parentElement.remove();
-  })
-})
+//      localStorage.setItem('roomDesign',JSON.stringify(roomDesigns));
+//      deleteBtn.parentElement.remove();
+//   })
+// })
 
 
 

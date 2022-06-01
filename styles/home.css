@@ -251,6 +251,35 @@
     margin-top: -100px;
 }
 
+.services__btn{
+    margin-right: 20px;
+}
+
+.download__btn{
+    position: relative;
+    padding-left: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #BD7048;
+    transition: 0.3s;
+}
+
+.download__btn::before{
+    content: '';
+    background: url('../images/pdf.svg');
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+}
+
+.download__btn:hover{
+    color: #f86515;
+}
+
 /* services end */
 
 /* plan start */
