@@ -221,6 +221,8 @@
 }
 
 .projects-info-container{
+    position: relative;
+    cursor: pointer;
     height: 66vh;
     background: url('../images/video.jpg');
     width: 100%;
@@ -238,6 +240,19 @@
     width: 152px;
     height: 152px;
     border-radius: 50%;
+    transition: 0.3s;
+}
+
+.video__wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.projects-info-container:hover .play__video{
+    transform: translateY(-15px);
 }
 
 /* projects info end */
