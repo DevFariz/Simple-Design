@@ -71,6 +71,10 @@
 
 /* team start */
 
+.team{
+    margin-bottom: 100px;
+}
+
 .team__title-container {
     text-align: right;
     position: relative;
@@ -106,6 +110,14 @@
 
 .swiper{
     height: 70vh;
+    border-radius: 30px;
+
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
 }
 
 .swiper-button-prev, .swiper-button-next{
