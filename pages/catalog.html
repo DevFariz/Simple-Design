@@ -1,65 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Design Catalog</title>
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../styles/catalog.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/catalog.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-          <div class="header-container">
-            <a href="./index.html" class="logo__link">
-              <h1 class="logo__text">
-                <span class="logo__text_black">Simple</span
-                ><span class="logo__text_orange">Design</span>
-              </h1>
-              <p class="logo__desc">дизайн интерьера</p>
+      <div class="container">
+        <div class="header-container">
+          <a href="./index.html" class="logo__link">
+            <h1 class="logo__text">
+              <span class="logo__text_black">Simple</span
+              ><span class="logo__text_orange">Design</span>
+            </h1>
+            <p class="logo__desc">дизайн интерьера</p>
+          </a>
+          <nav class="nav">
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="./index.html" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link_active">Каталог</a>
+              </li>
+              <li class="menu__item">
+                <a href="./about.html" class="menu__link">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a href="./services.html" class="menu__link">Цены</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <a class="contacts-container" href="tel:77005053000">
+              <img
+                src="../images/phone.svg"
+                alt="phone"
+                class="contacts__icon"
+              />
+              <div class="contacts__content">
+                <p class="contacts__phone">+7 700 505 3000</p>
+                <p class="contacts__available">с 9:00 до 18:00</p>
+              </div>
             </a>
-            <nav class="nav">
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="./index.html" class="menu__link">Главная</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link menu__link_active">Каталог</a>
-                </li>
-                <li class="menu__item">
-                  <a href="./about.html" class="menu__link">О нас</a>
-                </li>
-                <li class="menu__item">
-                  <a href="./services.html" class="menu__link">Цены</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="contacts">
-              <a class="contacts-container" href="tel:77005053000">
-                <img
-                  src="../images/phone.svg"
-                  alt="phone"
-                  class="contacts__icon"
-                />
-                <div class="contacts__content">
-                  <p class="contacts__phone">+7 700 505 3000</p>
-                  <p class="contacts__available">с 9:00 до 18:00</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <h1 class="intro__title">Дизайн комнат</h1>
+          <h3 class="intro__subtitle">
+            Выбирая дизайн комнаты, вы получаете смету со списком всех предметов
+            в интерьере, <br />
+            названиями, артикулами, цветом стен и так далее.
+          </h3>
+        </div>
+      </section>
+      <section class="design">
+        <div class="container">
+          <div class="designs-container">
+            <div class="design-items__container">
+              <h3 class="design-items__title">Гостиные</h3>
+              <div class="design-items">
+                <div class="design-item">
+                  <img
+                    src="../images/living-01.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="32000">Акварель</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
                 </div>
-              </a>
+                <div class="design-item">
+                  <img
+                    src="../images/living-02.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="35000">Ира</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/living-03.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="30000">Нурс</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="design-items__container">
+              <h3 class="design-items__title">Детские</h3>
+              <div class="design-items">
+                <div class="design-item">
+                  <img
+                    src="../images/child-01.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="43000">Синяя</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/child-02.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="40000">Розовая</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/child-03.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="25000">Яркая</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="design-items__container">
+              <h3 class="design-items__title">Коридоры - прихожие</h3>
+              <div class="design-items">
+                <div class="design-item">
+                  <img
+                    src="../images/corridors-01.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="20000">Ирина</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/corridors-02.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="40000">Акварель</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/corridors-03.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="70000">Кадыр</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="design-items__container">
+              <h3 class="design-items__title">Кухни</h3>
+              <div class="design-items">
+                <div class="design-item">
+                  <img
+                    src="../images/kitchen-01.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="32000">Акварель</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/kitchen-02.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="35000">Ира</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/kitchen-03.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="30000">Нурс</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="design-items__container">
+              <h3 class="design-items__title">Санузлы</h3>
+              <div class="design-items">
+                <div class="design-item">
+                  <img
+                    src="../images/bathrooms-01.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="32000">Нурл су</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/bathrooms-02.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="35000">Оркенд су 1</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                  src="../images/bathrooms-03.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="30000">Оркенд су 2</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="design-items__container">
+              <h3 class="design-items__title">Спальни</h3>
+              <div class="design-items">
+                <div class="design-item">
+                  <img
+                    src="../images/living-01.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="32000">Акварель</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/living-02.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="35000">Нурл свет</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+                <div class="design-item">
+                  <img
+                    src="../images/living-03.jpg"
+                    alt="design"
+                    class="design__img"
+                  />
+                  <div class="design-item__info">
+                    <p class="design-item__name" data-price="30000">Ира</p>
+                    <button class="card__btn">
+                      <img
+                        src="../images/card.svg"
+                        alt="card"
+                        class="card__img"
+                      />
+                      Выбрать
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </header>
-      <main class="main">
-          <section class="intro">
-              <div class="container">
-                  <h1 class="intro__title">Дизайн комнат</h1>
-                  <h3 class="intro__subtitle">Выбирая дизайн комнаты, вы получаете смету со списком всех предметов в интерьере, <br>
-                    названиями, артикулами, цветом стен и так далее.</h3>
-              </div>
-          </section>
-      </main>
-</body>
+      </section>
+    </main>
+
+
+    <script src="../js/index.js"></script>
+  </body>
 </html>
