@@ -1,0 +1,19 @@
+.intro {
+    padding: 75px 0;
+}
+
+.intro__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    color: #262626;
+    margin-bottom: 37px;
+}
+.intro__subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(38, 38, 38, 0.7);
+}
