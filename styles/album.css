@@ -49,3 +49,51 @@
 }
 
 /* intro end */
+
+/* see also start */
+
+.see-also{
+    margin-bottom: 90px;
+}
+
+.see-also__title{
+    margin-bottom: 55px;
+}
+
+.see-also-container {
+    display: flex;
+}
+.see-also__item {
+    position: relative;
+    margin-right: 50px;
+    overflow: hidden;
+}
+.see-also__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.see-also__item:hover .see-also__img{
+    transform: scale(0.98);
+}
+
+.see-also__img {
+    display: inline-block;
+    margin-bottom: 40px;
+    transition: 0.2s;
+}
+
+.see-also__item-title{
+    max-width: 280px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #353535;
+}
+
+/* sea also end */
