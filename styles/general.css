@@ -154,55 +154,6 @@ body {
     display: none;
 }
 
-@media (max-width: 960px) {
-    .btn{
-        padding: 20px 40px;
-    }
-}
-
-@media (max-width: 768px){
-    .burger{
-        display: block;
-    }
-
-    .burger{
-        position: absolute;
-        right: 5%;
-        top: 5%;
-        z-index: 999;
-    }
-
-    .menu{
-        position: fixed;
-        transform: translateY(-100%);
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        z-index: 998;
-        transition: 0.3s;
-    }
-
-    .menu_active{
-        transform: translateY(0);
-    }
-
-    .menu__item{
-        display: block;
-        font-size: 32px;
-        line-height: 18px;
-        margin: 25px 0;
-    }
-
-    .header-container .contacts{
-        display: none;
-    }
-}
-
 /* header end */
 
 /* accordion questions start */
@@ -292,3 +243,57 @@ body {
 }
 
 /* footer end */
+
+@media (max-width: 960px) {
+    .btn{
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 768px){
+    .burger{
+        display: block;
+    }
+
+    .burger{
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        z-index: 999;
+    }
+
+    .menu{
+        position: fixed;
+        transform: translateY(-100%);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 998;
+        transition: 0.3s;
+    }
+
+    .menu_active{
+        transform: translateY(0);
+    }
+
+    .menu__item{
+        display: block;
+        font-size: 32px;
+        line-height: 18px;
+        margin: 25px 0;
+    }
+
+    .header-container .contacts{
+        display: none;
+    }
+
+    .section__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
