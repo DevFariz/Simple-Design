@@ -110,8 +110,6 @@ body {
 
 .menu__link_active {
     font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
     color: #BD7048;
     text-underline-offset: 10px;
     text-decoration: underline;
@@ -150,6 +148,53 @@ body {
 .contacts__available {
     font-weight: 500;
     color: rgba(59, 59, 59, 0.5);
+}
+
+.burger{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .burger{
+        display: block;
+    }
+
+    .burger{
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        z-index: 999;
+    }
+
+    .menu{
+        position: fixed;
+        transform: translateY(-100%);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 998;
+        transition: 0.3s;
+    }
+
+    .menu_active{
+        transform: translateY(0);
+    }
+
+    .menu__item{
+        display: block;
+        font-size: 32px;
+        line-height: 18px;
+        margin: 25px 0;
+    }
+
+    .header-container .contacts{
+        display: none;
+    }
 }
 
 /* header end */
