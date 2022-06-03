@@ -675,6 +675,10 @@
 
 @media (max-width: 960px) {
 
+    .info{
+        margin-bottom: 90px;
+    }
+
     .swiper-horizontal > .swiper-pagination-bullets {
         display: none;
     }
@@ -691,7 +695,29 @@
     .card-btn:hover{
         width: 270px;
     }
+
+    .info-items{
+        padding: 40px 60px 20px;
+    }
+
+    .info-item{
+       width: 300px;
+       margin-bottom: 40px;
+    }
 }
+
+@media (max-width: 768px) {
+
+    .info{
+        margin-bottom: 50px;
+    }
+
+    .info-item{
+        padding-left: 30px;
+        margin: 0 auto 40px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .swiper{
@@ -701,6 +727,10 @@
     .intro__title{
         font-size: 26px;
         line-height: 32px;
+    }
+
+    .info-items{
+        padding: 40px 15px 20px;    
     }
 }
 
@@ -723,5 +753,13 @@
 
     .card-btn:hover{
         width: 250px;
+    }
+
+    .info-items{
+        margin-top: -80px;
+    }
+
+    .info-item{
+        margin: 0 auto 30px; 
     }
 }
