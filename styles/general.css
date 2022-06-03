@@ -154,6 +154,12 @@ body {
     display: none;
 }
 
+@media (max-width: 960px) {
+    .btn{
+        padding: 20px 40px;
+    }
+}
+
 @media (max-width: 768px){
     .burger{
         display: block;

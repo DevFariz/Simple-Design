@@ -2,7 +2,7 @@
 
 .swiper {
     width: 100%;
-    height: 680px;
+    height: 68vh;
     position: relative;
 }
 
@@ -59,6 +59,7 @@
     display: flex;
     align-items: center;
     transition: 0.2s;
+    border: none;
 }
 
 .card-btn:hover{
@@ -669,3 +670,58 @@
 }
 
 /* card end */
+
+/* responsive start */
+
+@media (max-width: 960px) {
+
+    .swiper-horizontal > .swiper-pagination-bullets {
+        display: none;
+    }
+
+    .intro__title{
+        font-size: 32px;
+    }
+
+    .card-btn{
+        width: 250px;
+        padding: 15px 30px;
+    }
+
+    .card-btn:hover{
+        width: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper{
+        height: 62vh;
+    }
+
+    .intro__title{
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .swiper{
+        height: 58vh;
+    }
+
+    .intro__title{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .card-btn{
+        width: 230px;
+        padding: 10px 20px;
+    }
+
+    .card-btn:hover{
+        width: 250px;
+    }
+}
