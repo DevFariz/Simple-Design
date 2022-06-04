@@ -233,7 +233,7 @@
     color: #262626;
 }
 
-.services-contant__text {
+.services-content__text {
     max-width: 497px;
     margin-bottom: 44px;
 }
@@ -245,15 +245,31 @@
 }
 
 .services-content_r{
-    margin-left: 140px;
+    margin-left: 80px;
+}
+
+.services__pic{
+    flex-basis: 50%;
+}
+
+.services__img{
+    width: 100%;
+    height: 100%;
 }
 
 .services__img_r{
     margin-top: -100px;
 }
 
+.services-btns{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .services__btn{
-    margin-right: 20px;
+    margin-bottom: 40px;
 }
 
 .download__btn{
@@ -264,6 +280,7 @@
     line-height: 18px;
     color: #BD7048;
     transition: 0.3s;
+    margin-bottom: 40px;
 }
 
 .download__btn::before{
@@ -685,6 +702,12 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .services-container{
+        margin-left: 40px;
+    }
+}
+
 @media (max-width: 1180px) {
     .how__pic{
         width: 480px;
@@ -720,6 +743,10 @@
         max-width: 100%;
         margin-left: 0;
     }
+
+    .services__img_r{
+        margin-top: -50px;
+    }
 }
 
 @media (max-width: 960px) {
@@ -754,6 +781,10 @@
        margin-bottom: 40px;
     }
 
+    .how{
+        margin-bottom: 20px;
+    }
+
     .how__title{
         margin-left: 40px;
     }
@@ -762,7 +793,44 @@
         margin-left: 40px;
     }
 
-    
+    .services{
+        margin-bottom: 40px;
+    }
+
+    .services__title{
+        margin: 0 0 0 40px;
+        text-align: left;
+    }
+
+    .services__odd{
+        flex-direction: column-reverse;
+    }
+
+    .services__even{
+        flex-direction: column;
+    }
+
+    .services__pic{
+        flex-basis: 97%;
+        margin: 0 auto 50px;
+    }
+
+    .services__btn{
+        margin-right: 30px;
+    }
+
+    .services-btns{
+        justify-content: start;
+    }
+
+    .services-content_r{
+        margin-left: 0;
+    }
+
+    .services-content__text {
+        max-width: 95%;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -793,7 +861,6 @@
     }
 }
 
-
 @media (max-width: 480px) {
     .swiper{
         height: 62vh;
@@ -820,8 +887,37 @@
         font-size: 28px;
         margin-right: 20px;
     }
-}
 
+    .services__title{
+        margin: 0 0 0 10px;
+    }
+
+    .services__pic{
+        margin: 0 auto 30px;
+    }
+
+    .services-container{
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+
+    .services-list{
+        margin-bottom: 40px;
+    }
+
+    .services__img_r{
+        margin-top: 0;
+    }
+
+    .services-content__title{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .services-content__subtext{
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 360px) {
 
