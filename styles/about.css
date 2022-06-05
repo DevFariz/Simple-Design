@@ -3,6 +3,7 @@
 .intro {
     padding: 40px 0;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .intro__subtitle {
@@ -43,6 +44,10 @@
 .concepts-container {
     display: flex;
     justify-content: space-between;
+}
+
+.concepts-content{
+    margin-right: 30px;
 }
 
 .concepts__title {
@@ -257,6 +262,13 @@
 
 /* projects info end */
 
+@media (max-width: 1080px){
+    .concepts__title{
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
 
 @media (max-width: 960px){
     .intro{
@@ -273,6 +285,26 @@
         line-height: 48px;
         margin-bottom: 40px;
     }
+
+    .concepts-container{
+        flex-direction: column;
+    }
+
+    .concepts__title{
+        max-width: 90%;
+    }
+
+    .concepts__text{
+        max-width: 90%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px){
+    .concepts__text{
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 480px){
@@ -285,5 +317,18 @@
     .intro__title{
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .concepts__title{
+        max-width: 100%;
+        font-size: 23px;
+        line-height: 27px;
+        margin-bottom: 30px;
+    }
+
+    .concepts__text{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
     }
 }
