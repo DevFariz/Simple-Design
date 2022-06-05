@@ -211,6 +211,7 @@
     color: #363636;
     z-index: 2;
     background-color: #fff;
+    padding-left: 40px;
 }
 
 .projects-info__title-container::after{
@@ -351,6 +352,26 @@
         font-size: 35px;
         line-height: 40px;
     }
+
+    .projects-info {
+        margin-bottom: 50px;
+    }
+    
+    .projects-info__title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    
+    .projects-info__title-container::after{
+        display: none;
+    }
+    
+    .projects-info-container{
+        position: relative;
+        cursor: pointer;
+        height: 50vh;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px){
@@ -361,6 +382,15 @@
 
     .swiper-button-prev, .swiper-button-next{
         display: none !important;
+    }
+
+    .projects-info-container{
+        height: 40vh;
+    }
+
+    .play__video{
+        width: 0;
+        height: 0;
     }
 }
 
@@ -394,6 +424,12 @@
         font-size: 16px;
         line-height: 20px;
     }
+
+    .projects-info__title{
+        font-size: 25px;
+        line-height: 30px;
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 480px){
@@ -425,6 +461,8 @@
         height: 40vh;
         border-radius: 30px;
     }
+
+ 
 }
 
 @media (max-width: 360px){
@@ -436,5 +474,9 @@
     .team__title{
         font-size: 22px;
         line-height: 28px;
+    }
+
+    .projects-info-container{
+        height: 35vh;
     }
 }
