@@ -921,6 +921,10 @@
     .design__info{
         display: none;
     }
+
+    .questions{
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1063,10 +1067,6 @@
 
     .how-item__content_01{
         padding-left: 0;
-    }
-
-    .questions{
-        margin-bottom: 50px;
     }
 
     .questions__title{

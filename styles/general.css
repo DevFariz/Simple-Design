@@ -296,4 +296,25 @@ body {
         font-size: 25px;
         line-height: 30px;
     }
+
+    .footer-container__top{
+        padding: 20px 0 50px;
+    }
+
+    .footer-nav, .privacy__policy{
+        display: none;
+    }
+
+    .contacts__content{
+        margin-left: 0;
+    }
+
+    .footer-bootom{
+        padding: 30px 0;
+    }
+
+    .rights{
+        font-size: 15px;
+        line-height: 18px;
+    }
 }
