@@ -155,4 +155,8 @@
     .card__btn{
         padding: 15px 34px 15px 40px;
     }
+
+    .design-item__name{
+        font-size: 16px;
+    }
 }
