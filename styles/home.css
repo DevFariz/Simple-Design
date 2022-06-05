@@ -877,10 +877,34 @@
     .design{
         margin-bottom: 70px;
     }
+
+    .card-container__left{
+        grid-column: span 2;
+    }
+
+    .card-container__right{
+        grid-column: span 2;
+    }
+
+    .card-lists{
+        margin: 0 0 0 20px;
+    }
+
+    .card-container__left{
+        max-width: 80%;
+    }
+
+    .card-container__right{
+        max-width: 70%;
+        margin-left: 20px;
+    }
+
+    .card__title{
+        margin-left: 20px
+    }
 }
 
 @media (max-width: 768px) {
-
     .info{
         margin-bottom: 50px;
     }
@@ -916,6 +940,51 @@
 
     .questions{
         margin-bottom: 50px;
+    }
+
+    .card-container__right{
+        max-width: 100%;
+        margin-right: 20px;
+    }
+
+    .added-card__btn{
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 600px){
+
+    .card-container__left{
+        max-width: 100%;
+    }
+
+    .card__title{
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0 0 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .card-item{
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .card-item__container {
+        margin-bottom: 12px;
+    }
+
+    .check-text, .card-item__price{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .card-container__right{
+        margin: 0;
+    }
+
+    .added-card__btn{
+        width: 100%;
     }
 }
 
@@ -1022,6 +1091,42 @@
     .test__desc{
         font-size: 15px;
         line-height: 18px;
+    }
+
+    .check-inp {
+        width: 18px;
+        height: 18px;
+    }
+
+    .card{
+        padding-top: 65px;
+    }
+
+    .close-card__btn-text{
+        display: none;
+    }
+
+    .card-container__content{
+        padding: 40px 5px;
+    }
+
+    .added-item__name, .added-total__text, .added-total__price{
+        font-size: 15px;
+        line-height: 18px;
+        width: auto;
+    }
+
+    .added-item__price{
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .card-container__content-text{
+        padding: 10px;
+    }
+
+    .card-container__right-text{
+        padding: 10px;
     }
 }
 
