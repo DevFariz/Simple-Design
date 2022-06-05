@@ -270,6 +270,14 @@
         font-size: 30px;
         line-height: 36px;
     }
+
+    .team-lead-container{
+        flex-direction: column-reverse;
+    }
+
+    .team-lead__info{
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -366,6 +374,25 @@
     .swiper{
         height: 50vh;
         border-radius: 30px;
+    }
+
+    .team-lead__name{
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .team-lead__desc-container{
+        margin-bottom: 25px;
+    }
+
+    .team-lead__desc{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .team-lead__text{
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
