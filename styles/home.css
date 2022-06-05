@@ -1013,6 +1013,20 @@
     .card__btn{
         padding: 15px 34px 15px 40px;
     }
+
+    .test{
+        padding: 60px 15px;
+        margin-bottom: 50px;
+    }
+    .test__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    .test__desc{
+        font-size: 15px;
+        line-height: 18px;
+    }
 }
 
 @media (max-width: 360px) {
