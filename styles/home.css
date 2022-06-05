@@ -374,15 +374,10 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; */
     margin-bottom: 110px;
 }
 
 .design-item{
-    /* flex-basis: 30%; */
-    /* margin-right: 15px; */
     grid-column: span 2;
 }
 
@@ -430,8 +425,6 @@
 .design__more{
     display: inline-block;
 }
-
-
 
 /* design end */
 
@@ -747,7 +740,6 @@
     .design__img{
         width: 100%;
     }
-
 }
 
 @media (max-width: 1080px) {
