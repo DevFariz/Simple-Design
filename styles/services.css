@@ -1,7 +1,7 @@
 /* services start */
 
 .services {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .services-header{
@@ -12,7 +12,7 @@
 .services-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 150px;
+    column-gap: 60px;
 }
 
 .services-left, .services-right{
@@ -26,7 +26,7 @@
     line-height: 37px;
     color: #FFFFFF;
     padding: 29px 0 24px 80px;
-    flex-basis: 50%;
+    margin-bottom: 40px;
 }
 
 .services__head::before{
@@ -128,3 +128,63 @@
 
 
 /* more services end */
+
+
+@media (max-width: 960px){
+    .services__head{
+        font-size: 25px;
+        line-height: 30px;
+        padding: 29px 0 24px 73px;
+    }
+
+    .services-left, .services-right{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px){
+    .services-left, .services-right{
+        grid-column: span 2;
+    }
+
+    .services-left{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .services__head {
+        font-size: 22px;
+        line-height: 30px;
+        padding: 20px 0 16px 80px;
+    }
+
+    .services__text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .services__text_normal{
+        margin-bottom: 20px;
+    }
+
+    .services__subtitle {
+        margin-bottom: 15px;
+    }
+
+    .services__text_bold{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .services__price{
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px){
+    .services-left, .services-right{
+        padding: 0;
+    }
+}

@@ -212,6 +212,8 @@ function removeElementFromCard(e) {
 
 //************** card calculator end *****************/
 
+//************** remove from card start *****************/
+
 let isTrue = true;
 
 if (isTrue) {
@@ -232,3 +234,5 @@ cardList.addEventListener("DOMNodeInserted", () => {
     removeElementFromCard(e);
   });
 });
+
+//************** remove from card end *****************/
