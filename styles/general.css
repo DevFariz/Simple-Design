@@ -243,6 +243,27 @@ body {
     color: #FFFFFF;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(221, 137, 27); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
 /* footer end */
 
 @media (max-width: 960px) {
@@ -319,3 +340,4 @@ body {
         line-height: 18px;
     }
 }
+
