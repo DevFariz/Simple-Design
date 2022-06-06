@@ -18,7 +18,7 @@
     font-size: 30px;
     line-height: 37px;
     color: #FFFFFF;
-    padding: 0 0 65px 134px;
+    padding: 0 0 65px 7%;
 }
 
 .intro__info{
@@ -62,7 +62,13 @@
 
 .see-also-container {
     display: flex;
+    flex-wrap: wrap;
 }
+
+.see-also__img{
+    width: 100%;
+}
+
 .see-also__item {
     position: relative;
     margin-right: 50px;
@@ -97,3 +103,67 @@
 
 /* sea also end */
 
+@media (max-width: 768px){
+
+    .see-also__title{
+        margin-bottom: 30px;
+    }
+
+    .see-also-container{
+        display: block;
+        width: 80%;
+    }
+
+    .see-also__item{
+        margin: 0 0 30px 0;
+    }
+}
+
+@media (max-width: 600px){
+
+    .see-also{
+        margin-bottom: 50px;
+    }
+
+    .see-also-container{
+        width: 100%;
+    }
+
+    .see-also__img{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .intro{
+        margin-bottom: 30px;
+    }
+
+    .intro-container{
+        height: 50vh;
+        margin-bottom: 40px;
+    }
+
+    .intro__title{
+        font-size: 24px;
+        line-height: 32px;
+        padding-left: 0;
+    }
+    
+    .intro__info{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+
+    .intro-price__text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .intro__price{
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
